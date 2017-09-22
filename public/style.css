@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#header h1 {
+    margin: 0.5rem 1rem;
+}
+
+#header .auth {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem 1rem;
+}
+
+#header .menuBar {
+    background: black;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+#header .menuBar a {
+    color: white;
+}
+
+#footer {
+    background: black;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+#content {
+    flex: 1;
+    padding: 0 1rem;
+}
