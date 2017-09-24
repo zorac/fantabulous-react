@@ -19,7 +19,7 @@ function doProgress(action) {
 export function login(username, password) {
   return function(dispatch) {
     dispatch(doProgress(LOGIN))
-    fetch('/api/login', {
+    fetch('/api/auth/login', {
       method: 'POST',
       body: new URLSearchParams({ username, password })
     }).then(
@@ -33,8 +33,8 @@ export function login(username, password) {
 export function logout() {
   return function(dispatch) {
     dispatch(doProgress(LOGOUT))
-    fetch('/api/login', {
-      method: 'DELETE'
+    fetch('/api/auth/logout', {
+      method: 'POST'
     }).then(
       response => dispatch(doLogout())
     )
@@ -44,8 +44,8 @@ export function logout() {
 export function switchPseud(pseud) {
   return function(dispatch) {
     dispatch(doProgress(SWITCH_PSEUD))
-    fetch('/api/login', {
-      method: 'PUT',
+    fetch('/api/auth/pseud', {
+      method: 'POST',
       body: new URLSearchParams({ pseud })
     }).then(
       response => dispatch(doPseud(response.json()))
