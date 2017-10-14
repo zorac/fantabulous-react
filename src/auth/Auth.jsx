@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class AuthUI extends Component {
+class Auth extends Component {
   render() {
     const user = this.props.auth.user;
     const inProgress = this.props.auth.inProgress;
@@ -31,4 +31,4 @@ class AuthUI extends Component {
   }
 }
 
-export default AuthUI
+export default Auth

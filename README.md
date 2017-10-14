@@ -1,4 +1,4 @@
-# Fantabulous
+# Fantabulous — React Frontend
 
 A multi-fandom fanwork archive.
 

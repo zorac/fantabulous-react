@@ -1,4 +1,9 @@
-import { LOGIN, LOGOUT, SWITCH_PSEUD, AUTH_IN_PROGRESS } from '../actions'
+import {
+  LOGIN,
+  LOGOUT,
+  SWITCH_PSEUD,
+  AUTH_IN_PROGRESS
+} from '../actions'
 
 function doLogin(user, pseud) {
   return { type: LOGIN, user, pseud }

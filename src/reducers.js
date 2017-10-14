@@ -1,13 +1,10 @@
 import { combineReducers } from 'redux'
-import auth from './auth/reducers'
+import auth from './auth/authReducers'
+import cache from './data/cacheReducers'
 
-function cache(state = {}, action) {
-  return state;
-}
-
-const fantabulousApp = combineReducers({
+const reducers = combineReducers({
   auth,
   cache
 })
 
-export default fantabulousApp
+export default reducers

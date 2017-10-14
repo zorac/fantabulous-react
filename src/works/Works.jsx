@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Work from './WorkFromCache'
 
-class Works extends Component {
-  render() {
-    return (
-      <div className="works">
-        <p>TODO!</p>
-      </div>
-    )
+function Works(props) {
+  let ids = props.workIds;
+
+  if (ids && (ids.length > 0)) {
+    return ids.map(id =>
+      <Work key={id} workId={id}/>
+    );
+  } else {
+    return null;
   }
 }
 

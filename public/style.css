@@ -4,6 +4,10 @@ html, body {
     height: 100%;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 #container {
     display: flex;
     min-height: 100vh;
@@ -40,4 +44,44 @@ html, body {
 #content {
     flex: 1;
     padding: 0 1rem;
+}
+
+.work {
+    margin: 1rem 0;
+    background: #EEE;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.work .headline {
+    font-size: 110%;
+}
+
+.tag {
+    border-radius: 0.5rem;
+    color: black;
+    display: inline-block;
+    margin: 0.1rem 0;
+    padding: 0 0.4rem;
+    text-decoration: none;
+}
+
+.tag.fandom {
+    background: #bbf;
+}
+
+.tag.warning {
+    background: #faa;
+}
+
+.tag.ship {
+    background: #bfb;
+}
+
+.tag.character {
+    background: #ff8;
+}
+
+.tag.generic {
+    background: #ccc;
 }

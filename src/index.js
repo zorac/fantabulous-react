@@ -6,12 +6,12 @@ import thunkMiddleware from 'redux-thunk'
 import { BrowserRouter as Router } from 'react-router-dom'
 // TODO react-router-redux 5 when available
 import App from './App'
-import fantabulousApp from './reducers'
+import reducers from './reducers'
 
 const store = createStore(
-    fantabulousApp,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    applyMiddleware(thunkMiddleware)
+  reducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunkMiddleware)
 )
 
 render(
