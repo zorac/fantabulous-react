@@ -1,0 +1,10 @@
+.work {
+    margin: 1rem 0;
+    background: #EEE;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.work .headline {
+    font-size: 110%;
+}

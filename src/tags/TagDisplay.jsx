@@ -1,9 +1,12 @@
 import React from 'react'
+import Page from '../Page'
 import Tag from './Tag'
 
 function TagDisplay(props) {
   return (
-    <Tag tag={props.tag}/>
+    <Page>
+      <Tag tag={props.tag}/>
+    </Page>
   )
 }
 

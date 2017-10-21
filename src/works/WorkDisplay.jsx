@@ -1,9 +1,12 @@
 import React from 'react'
+import Page from '../Page'
 import Work from './Work'
 
 function WorkDisplay(props) {
   return (
-    <Work work={props.work}/>
+    <Page>
+      <Work work={props.work}/>
+    </Page>
   )
 }
 

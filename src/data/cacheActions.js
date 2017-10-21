@@ -70,8 +70,11 @@ export function loadWorks(workIds) {
           var tags = new Set()
 
           works.forEach(work => {
-            work.pseudIds.forEach(id => pseuds.add(id))
-            work.tagIds.forEach(id => tags.add(id))
+            work.pseudIds.forEach(
+              id => pseuds.add(id))
+            Object.values(work.tagIds).forEach(
+              ids => ids.forEach(
+                id => tags.add(id)))
           })
 
           dispatch(loadPseuds([...pseuds]))

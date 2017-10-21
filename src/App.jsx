@@ -7,21 +7,20 @@ import PseudPage from './users/PseudPage'
 import TagPage from './tags/TagPage'
 import WorksPage from './works/WorksPage'
 import WorkPage from './works/WorkPage'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
       <div id="container">
         <Header/>
-        <div id="content">
-          <Switch>
-            <Route exact path="/" component={HomePage}/>
-            <Route path="/pseuds/:pseudId" component={PseudPage}/>
-            <Route path="/tags/:tagId" component={TagPage}/>
-            <Route path="/works/:workId" component={WorkPage}/>
-            <Route path="/works/" component={WorksPage}/>
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={HomePage}/>
+          <Route path="/pseuds/:pseudId" component={PseudPage}/>
+          <Route path="/tags/:tagId" component={TagPage}/>
+          <Route path="/works/:workId" component={WorkPage}/>
+          <Route path="/works/" component={WorksPage}/>
+        </Switch>
         <Footer/>
       </div>
     )

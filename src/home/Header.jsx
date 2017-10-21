@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Auth from '../auth/AuthHandler'
 import MenuBar from './MenuBar'
+import './Header.css'
 
 class Header extends Component {
   render() {

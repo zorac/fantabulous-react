@@ -1,0 +1,28 @@
+.tag {
+    border-radius: 0.5rem;
+    color: black;
+    display: inline-block;
+    margin: 0.1rem 0;
+    padding: 0 0.4rem;
+    text-decoration: none;
+}
+
+.tag.fandom {
+    background: #bbf;
+}
+
+.tag.warning {
+    background: #faa;
+}
+
+.tag.ship {
+    background: #bfb;
+}
+
+.tag.character {
+    background: #ff8;
+}
+
+.tag.generic {
+    background: #ccc;
+}

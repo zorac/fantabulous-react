@@ -26,7 +26,8 @@ export function login(username, password) {
     dispatch(doProgress(LOGIN))
     fetch('/api/auth/login', {
       method: 'POST',
-      body: new URLSearchParams({ username, password })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
     }).then(
       response => response.json()
     ).then(
