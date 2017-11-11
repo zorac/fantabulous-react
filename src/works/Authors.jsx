@@ -8,9 +8,9 @@ function Authors(props) {
     let last = ids.length - 1
 
     return (
-      <span className="authors">{props.pseudIds.map((pseud, index) => [
-        ((index === 0) ? ' by ' : (index === last) ? ' & ' : ', '),
-        <Pseud key={pseud} pseud={pseud}/>
+      <span className="authors">{props.pseudIds.map((id, index) => [
+        ((index === 0) ? null : (index === last) ? ' & ' : ', '),
+        <Pseud key={id} pseud={id}/>
       ])}</span>
     )
   } else {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Authors from './Authors'
+import SeriesList from './SeriesList'
 import Tags from '../tags/Tags'
 import './Work.css'
 
@@ -30,11 +31,20 @@ class Work extends Component {
           <div className="headline">
             <Link to={'/works/' + work.id} className="title">
               {work.name}
-            </Link>
-            <Authors pseudIds={work.pseudIds}/>
+            </Link> by <Authors pseudIds={work.pseudIds}/>
           </div>
-          <Tags tagIds={tags.fandom}/>
-          <Tags tagIds={[...tags.warning, ...tags.ship, ...tags.character, ...tags.generic]}/>
+          <div className="fandoms">
+            <Tags type="fandom" tagIds={tags.fandom}/>
+          </div>
+          <div className="tags">
+            <Tags type="warning" tagIds={tags.warning}/>
+            <Tags type="ship" tagIds={tags.ship}/>
+            <Tags type="character" tagIds={tags.character}/>
+            <Tags type="generic" tagIds={tags.generic}/>
+          </div>
+          <div className="serieses">
+            <SeriesList seriesIds={work.seriesIds} workId={work.id}/>
+          </div>
         </div>
       )
     } else {

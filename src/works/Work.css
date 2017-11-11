@@ -8,3 +8,8 @@
 .work .headline {
     font-size: 110%;
 }
+
+.work th {
+    text-align: right;
+    white-space: nowrap;
+}

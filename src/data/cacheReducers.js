@@ -1,5 +1,6 @@
 import {
   CACHE_LOADED_PSEUDS,
+  CACHE_LOADED_SERIES,
   CACHE_LOADED_TAGS,
   CACHE_LOADED_WORKS,
 } from '../actions'
@@ -22,6 +23,14 @@ function cacheReducer(state = EMPTY_CACHE, action) {
       })
 
       return { ...state, pseuds }
+    case CACHE_LOADED_SERIES:
+      let series = { ...state.series }
+
+      action.series.forEach(function(s) {
+        series[s.id] = s
+      })
+
+      return { ...state, series }
     case CACHE_LOADED_TAGS:
       let tags = { ...state.tags }
 

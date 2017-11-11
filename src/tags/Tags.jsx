@@ -5,11 +5,8 @@ function Tags(props) {
   let ids = props.tagIds
 
   if (ids && (ids.length > 0)) {
-    return (
-      <div className="tags">{props.tagIds.map((tag, index) => [
-        ((index > 0) ? ' ' : null),
-        <Tag key={tag} tag={tag}/>
-      ])}</div>
+    return props.tagIds.map((tag, index) =>
+      <Tag key={tag} tag={tag}/>
     )
   } else {
     return null;

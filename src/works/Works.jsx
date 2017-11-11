@@ -7,7 +7,7 @@ function Works(props) {
   if (ids && (ids.length > 0)) {
     return ids.map(id =>
       <Work key={id} workId={id}/>
-    );
+    )
   } else {
     return null;
   }
